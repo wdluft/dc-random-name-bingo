@@ -7,6 +7,7 @@ const resetBtn = document.querySelector('.reset');
 const textArea = document.querySelector('.container__textarea');
 const submitBtn = document.querySelector('.container__btn--submit');
 const instructions = document.querySelector('.instructions');
+const names = document.querySelector('.names-in-list');
 
 const getNewPerson = () => {
   const arrLen = people.length;
@@ -54,10 +55,16 @@ const handleListSubmit = e => {
 
   console.log(textArea.value);
   // Remove all whitespace and split names into an array
-  peopleBase = textArea.value.replace(/\s/g, '').split(',');
-  people = [...peopleBase];
+  const peopleList = textArea.value.replace(/\s/g, '').split(',');
+  peopleBase = [...peopleList];
+  people = [...peopleList];
   newPersonBtn.disabled = false;
   instructions.style.display = 'none';
+  peopleList.forEach(person => {
+    const personLi = document.createElement('li');
+    personLi.textContent = person;
+    names.appendChild(personLi);
+  });
 };
 
 newPersonBtn.addEventListener('click', getNewPerson);

@@ -113,3 +113,7 @@ p {
 .container__btn--submit {
   width: 200px;
 }
+
+.names-in-list {
+  list-style: none;
+}
