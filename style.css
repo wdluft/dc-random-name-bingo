@@ -36,6 +36,10 @@ p {
   border-radius: 5px;
   border: 2px solid var(--tertiary-color);
   height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: left;
 }
 
 .container__h1 {
@@ -92,4 +96,20 @@ p {
 .person-list {
   margin-left: 1.5rem;
   font-size: 1.25rem;
+}
+
+.input-stuff {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+.container__textarea {
+  width: 200px;
+  height: 100px;
+}
+
+.container__btn--submit {
+  width: 200px;
 }

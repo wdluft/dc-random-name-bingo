@@ -9,21 +9,28 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="container__h1">DonorsChoose Customer Support Bingo</h1>
-      <button disabled="true" type="button" class="person-btn container__btn">
-        Next Person
-      </button>
-      <button type="button" class="reset container__btn container__btn--reset">
-        Reset
-      </button>
+      <h1 class="container__h1">Names In A Hat Picker</h1>
       <p class="instructions">
         Put in a list of names, separated by a comma, and click the button to
         create a list of names to pull random names from.
       </p>
-      <textarea class="container__textarea"></textarea>
-      <button type="button" class="container__btn--submit container__btn">
-        Submit List
-      </button>
+      <div class="input-stuff">
+        <textarea class="container__textarea"></textarea>
+        <button type="button" class="container__btn--submit container__btn">
+          Submit List
+        </button>
+      </div>
+      <div class="game-buttons">
+        <button disabled="true" type="button" class="person-btn container__btn">
+          Next Person
+        </button>
+        <button
+          type="button"
+          class="reset container__btn container__btn--reset"
+        >
+          Reset
+        </button>
+      </div>
       <ol class="person-list"></ol>
     </div>
     <script src="app.js"></script>
